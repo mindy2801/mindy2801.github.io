@@ -1,3 +1,40 @@
+// 문제 타입에 따라 입력 폼을 동적으로 표시/숨김하는 함수
+function showOptions() {
+    var questionType = document.getElementById("questionType").value;
+    var mcqOptions = document.getElementById("multipleChoiceOptions");
+    var essayOptions = document.getElementById("essayOptions");
+
+    // 객관식 문제인 경우
+    if (questionType === "multipleChoice") {
+        mcqOptions.style.display = "block";
+        essayOptions.style.display = "none";
+    }
+    // 주관식 문제인 경우
+    else if (questionType === "essay") {
+        mcqOptions.style.display = "none";
+        essayOptions.style.display = "block";
+    }
+}
+
+// 문제 출제 함수 수정
+function submitQuestion() {
+    var question = document.getElementById("question").value;
+    var questionType = document.getElementById("questionType").value;
+    var mcqChoices = document.getElementById("mcqChoices").value;
+    var modelAnswer = document.getElementById("modelAnswer").value;
+    var gradingCriteria = document.getElementById("gradingCriteria").value;
+
+    // 여기에서 새로운 문제를 처리하는 로직을 추가해야 합니다.
+
+    // Debug: 콘솔에 출력
+    console.log("Question:", question);
+    console.log("Question Type:", questionType);
+    console.log("MCQ Choices:", mcqChoices);
+    console.log("Model Answer:", modelAnswer);
+    console.log("Grading Criteria:", gradingCriteria);
+}
+
+
 function submitQuestion() {
     // 사용자가 입력한 문제 가져오기
     var question = document.getElementById("question").value;
