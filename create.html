@@ -9,7 +9,32 @@
 <body>
     <main>
         <h1>문제출제 페이지</h1>
-        <!-- 문제출제 페이지 내용을 추가할 부분 -->
+        
+        <!-- 비밀번호 입력 폼 -->
+        <label for="password">비밀번호:</label>
+        <input type="password" id="password" placeholder="비밀번호 입력">
+        <button onclick="authenticate()">확인</button>
+
+        <!-- 문제출제 페이지 내용 -->
+        <div id="createSection" style="display:none;">
+            <!-- 실제 문제출제 내용을 추가할 부분 -->
+        </div>
     </main>
+
+    <script src="script.js"></script>
+    <script>
+        function authenticate() {
+            var passwordInput = document.getElementById("password").value;
+            
+            // 비밀번호 검증
+            if (passwordInput === "yakseo_genius") {
+                // 비밀번호가 맞으면 문제출제 섹션을 표시
+                document.getElementById("createSection").style.display = "block";
+            } else {
+                // 비밀번호가 틀리면 알림 메시지를 표시
+                alert("비밀번호가 올바르지 않습니다.");
+            }
+        }
+    </script>
 </body>
 </html>
