@@ -18,6 +18,8 @@ function showOptions() {
 
 // 문제 출제 함수 수정
 function submitQuestion() {
+    console.log("submitQuestion 함수 호출");
+    //
     var questionType = document.getElementById("questionType").value;
     var question = document.getElementById("question").value;
     var mcqChoices = document.getElementById("mcqChoices").value;
