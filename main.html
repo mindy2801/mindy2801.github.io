@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문제풀이 사이트</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>문제풀이 사이트</h1>
+    </header>
+    <main>
+        <!-- 문제 입력 폼 -->
+        <form id="questionForm">
+            <label for="question">문제:</label>
+            <textarea id="question" name="question" rows="4" cols="50"></textarea>
+
+            <!-- 객관식 문항 -->
+            <label for="mcq">객관식 문항:</label>
+            <input type="text" id="mcq" name="mcq" placeholder="객관식 문항을 입력하세요">
+
+            <!-- 서술형 문항 -->
+            <label for="essay">서술형 문항:</label>
+            <textarea id="essay" name="essay" rows="4" cols="50" placeholder="서술형 문항을 입력하세요"></textarea>
+
+            <button type="button" onclick="submitQuestion()">문제 출제</button>
+        </form>
+
+        <!-- 채점 결과 표시 -->
+        <div id="result"></div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
